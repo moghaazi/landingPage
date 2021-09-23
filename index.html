@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <!-- SCSS -->
+    <link rel="stylesheet" href="./style.scss" />
+    <!-- Title -->
+    <title>LandingPage</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+  </head>
+
+  <body>
+    <!-- ----------- Header ----------------------- -->
+    <header class="container">
+      <!-- Logo -->
+      <div class="logo">Logo</div>
+
+      <!-- NavBar -->
+      <nav>
+        <ul onclick="activeNavLink(event)">
+          <li><a class="active" href="#header">Header</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#footer">Footer</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero -->
+    <div class="hero container-fluid">
+      <img src="./assets/imgs/headerTop.svg" />
+      <h2>Header</h2>
+      <img src="./assets/imgs/headerBottom.svg" />
+    </div>
+
+    <!-- ----------- Team ----------------------- -->
+    <div class="team container-fluid" id="team">
+      <img src="./assets/imgs/teamTop.svg" />
+      <h2>Team</h2>
+      <img src="./assets/imgs/teamBottom.svg" />
+    </div>
+
+    <!-- ----------- Contact ----------------------- -->
+    <div class="contact container-fluid" id="contact">
+      <img src="./assets/imgs/contactTop.svg" />
+      <h2>Contact</h2>
+      <img src="./assets/imgs/contactBottom.svg" />
+    </div>
+
+    <!-- ----------- About ----------------------- -->
+    <div class="about container-fluid" id="about">
+      <img src="./assets/imgs/aboutTop.svg" />
+      <h2>About</h2>
+      <img src="./assets/imgs/aboutBottom.svg" />
+    </div>
+
+    <!-- ----------- Top Btn ---------------------- -->
+    <button class="top-btn">🔝</button>
+
+    <!-- ----------- Footer ----------------------- -->
+    <footer class="container" id="footer">
+      <a href="https://www.github.com/moghaazi" target="_blank"
+        >©️ moghaazi</a
+      >
+    </footer>
+
+    <!-- ----------- Script ----------------------- -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
