@@ -83,8 +83,8 @@ header {
   top: 0;
   z-index: 999;
 
-  // md 768px
-  @media (max-width: 768px) {
+  // lg 992px
+  @media (max-width: 992px) {
     flex-direction: column;
 
     .logo {
@@ -92,11 +92,12 @@ header {
       margin-top: 3rem;
     }
 
+    nav {
+      display: none;
+    }
+
     nav ul {
-      // md 768px
-      @media (max-width: 768px) {
-        flex-direction: column;
-      }
+      flex-direction: column;
     }
   }
 
@@ -107,6 +108,18 @@ header {
     color: #f32291;
     -webkit-text-stroke: 3px #00ff9d;
     letter-spacing: 6.2px;
+  }
+
+  // openNav
+  .toggle-nav {
+    display: none;
+    width: 5rem;
+    cursor: pointer;
+
+    // lg 992px
+    @media (max-width: 992px) {
+      display: block;
+    }
   }
 
   // Nav
