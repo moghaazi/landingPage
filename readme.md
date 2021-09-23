@@ -1,7 +1,3 @@
-# Description
-
-Simple Landing-page project for **FWD**
-
 # Run
 
 `yarn` For installing all packages.
