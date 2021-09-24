@@ -1,16 +1,12 @@
 // ---------------- Scrool to top Btn ------------------------------------------------
-// Get the btn
-let topBtn = document.querySelector('.top-btn')
+// Get the el
+let topBtn = document.querySelector(".top-btn");
 
 // On Click, Scroll to the page's top
-topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' }) // Replace 'smooth' with 'instant' if you don't want smooth scrolling
+topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" }); // Replace 'smooth' with 'instant' if you don't want smooth scrolling
 
-// On scroll, Show/Hide the btn
-window.addEventListener('scroll', () => {
-  window.scrollY > 500
-    ? (topBtn.style.display = 'block')
-    : (topBtn.style.display = 'none')
-})
+// On scroll, Show/Hide the btn with animation
+window.onscroll = () => window.scrollY > 500 ? topBtn.style.opacity = 1 : topBtn.style.opacity = 0
 
 // ---------------- NavBar active link --------------------------------------------------
 window.activeNavLink = event => {
