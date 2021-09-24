@@ -227,12 +227,12 @@ footer {
 
 // Tob Btn
 .top-btn {
-  all: unset;
+  all: unset; 
   position: fixed;
   right: 20px;
-  bottom: 54px;
+  bottom: 20px;
   cursor: pointer;
-  font: bold 3rem 'Press Start 2P', cursive;
-  color: white;
-  display: none;
+  transform:scale(1.8);
+  opacity: 0;
+  transition: .3s;
 }
