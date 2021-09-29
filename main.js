@@ -1,9 +1,11 @@
+import './style.scss'
+
 // ---------------- Scrool to top Btn ------------------------------------------------
 // Get the btn
 let topBtn = document.querySelector('.top-btn')
 
-// On Click, Scroll to the page's top
-topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' }) // Replace 'smooth' with 'instant' if you don't want smooth scrolling
+// On Click, Scroll to the page's top, replace 'smooth' with 'instant' iyarn upgrade-interactive you don't want smooth scrolling
+topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 // On scroll, Show/Hide the btn
 window.addEventListener('scroll', () => {
