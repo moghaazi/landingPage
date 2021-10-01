@@ -1,5 +1,7 @@
+/* ======================= Font ==================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* ======================= Global ==================================================== */
 *,
 *::before,
 *::after {
@@ -72,6 +74,7 @@ body {
   border-radius: 5rem;
 }
 
+/* ======================= Header ==================================================== */
 header {
   margin-top: 1.3rem;
   margin-bottom: 25rem;
@@ -153,6 +156,7 @@ header nav ul li .active {
   color: #eee;
 }
 
+/* ======================= Other Sections ==================================================== */
 .hero,
 .team,
 .contact,
@@ -196,19 +200,23 @@ header nav ul li .active {
   bottom: -200px;
 }
 
+/* ======================= Team ==================================================== */
 .team {
   background-color: #e4197e;
 }
 
+/* ======================= Contact ==================================================== */
 .contact {
   background-color: #19e4c9;
 }
 
+/* ======================= About ==================================================== */
 .about {
   background-color: #be11be;
   margin-bottom: 30rem;
 }
 
+/* ======================= Footer ==================================================== */
 footer {
   background-color: #333;
   height: 5rem;
@@ -225,6 +233,7 @@ footer a {
   letter-spacing: 1.3px;
 }
 
+/* ======================= Scrool to top Btn ==================================================== */
 .top-btn {
   all: unset;
   position: fixed;
