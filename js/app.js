@@ -1,5 +1,3 @@
-import './style.scss'
-
 // ---------------- Scrool to top Btn ------------------------------------------------
 // Get the el
 let topBtn = document.querySelector('.top-btn')
