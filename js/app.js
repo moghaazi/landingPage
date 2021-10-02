@@ -1,4 +1,4 @@
-// ---------------- Scrool to top Btn ------------------------------------------------
+// ---------------- Scroll to top Btn ------------------------------------------------
 // Get the el
 let topBtn = document.querySelector('.top-btn')
 
@@ -6,14 +6,15 @@ let topBtn = document.querySelector('.top-btn')
 topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 // On scroll, Show/Hide the btn with animation
-window.onscroll = () =>
+window.onscroll = () => {
   window.scrollY > 500
     ? (topBtn.style.opacity = 1)
     : (topBtn.style.opacity = 0)
+}
 
 // ---------------- NavBar active link --------------------------------------------------
-window.activeNavLink = event => {
-  document
+let activeNavLink = event => {
+  window.document
     .querySelectorAll('header nav ul li a.active')
     .forEach(item => item.classList.remove('active'))
   event.target.classList.add('active')
@@ -32,15 +33,41 @@ for (const link of links) {
 
 // ---------------- On scroll, Show/Hide the header -----------------------------------------
 let navBar = document.querySelector('header')
-let prevScrollpos = window.pageYOffset
-
+let prevScrollPos = window.pageYOffset
 window.addEventListener('scroll', () => {
   let currentScrollPos = window.pageYOffset
-  prevScrollpos > currentScrollPos
+
+  prevScrollPos > currentScrollPos
     ? (navBar.style.top = '0')
     : (navBar.style.top = '-500px')
-  prevScrollpos = currentScrollPos
+  prevScrollPos = currentScrollPos
 })
+
+// window.addEventListener('scroll', () => {
+//   let navBar = document.querySelector('header')
+
+//   navBar.style.opacity == 0
+//     ? (navBar.style.opacity = 1)
+//     : (navBar.style.opacity = 0)
+// })
+
+// var timer = null
+// let navBar = document.querySelector('header')
+
+// window.addEventListener(
+//   'scroll',
+//   function () {
+//     if (timer !== null) {
+//       clearTimeout(timer)
+//     }
+//     timer = setTimeout(() => {
+//       navBar.style.opacity == 0
+//         ? (navBar.style.opacity = 1)
+//         : (navBar.style.opacity = 0)
+//     }, 150)
+//   },
+//   false
+// )
 
 // ---------------- Toggle Nav ---------------------------------------------------------
 let toggleNav = document.querySelector('header .toggle-nav')

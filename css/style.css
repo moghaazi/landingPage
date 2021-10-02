@@ -76,7 +76,6 @@ body {
 
 /* ======================= Header ==================================================== */
 header {
-  margin-top: 1.3rem;
   margin-bottom: 25rem;
   display: flex;
   justify-content: space-between;
@@ -84,8 +83,9 @@ header {
   padding: 2rem;
   background-color: #111;
   position: fixed;
-  top: 0;
   z-index: 999;
+  top: 0;
+  transition: 0.3s;
 }
 
 @media (max-width: 992px) {
@@ -167,12 +167,29 @@ header nav ul li .active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: black;
-  font: bold 4rem 'Press Start 2P', cursive;
-  letter-spacing: 6.2px;
   margin-bottom: 70rem;
   margin-top: 50rem;
   position: relative;
+}
+
+.hero h2,
+.team h2,
+.contact h2,
+.about h2 {
+  margin-bottom: 5rem;
+  letter-spacing: 6.2px;
+  font: bold 7rem 'Press Start 2P', cursive;
+}
+
+.hero p,
+.team p,
+.contact p,
+.about p {
+  font: bold 2rem/3rem monospace;
+  width: 80%;
+  text-align: center;
 }
 
 @media (max-width: 576px) {
