@@ -8,11 +8,12 @@
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+  scroll-margin-top: 250px;
 }
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -21,6 +22,8 @@ body {
   background-color: #111;
   color: white;
   font: bold 2rem 'Press Start 2P', cursive;
+
+  /* height: 7000px; */
 }
 
 .container,
@@ -234,7 +237,7 @@ header nav ul li .active {
 }
 
 /* ======================= Footer ==================================================== */
-footer {
+.footer {
   background-color: #333;
   height: 5rem;
   display: flex;
@@ -242,7 +245,7 @@ footer {
   align-items: center;
 }
 
-footer a {
+.footer a {
   all: unset;
   color: #eee;
   cursor: pointer;
@@ -261,3 +264,4 @@ footer a {
   opacity: 0;
   transition: 0.3s;
 }
+

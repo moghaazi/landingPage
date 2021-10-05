@@ -2,36 +2,25 @@
 // Get the el
 let topBtn = document.querySelector('.top-btn')
 
-// On Click, Scroll to the page's top, replace 'smooth' with 'instant' iyarn upgrade-interactive you don't want smooth scrolling
+// On Click, Scroll to the page's top, replace 'smooth' with 'instant' if you don't want smooth scrolling
 topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 // On scroll, Show/Hide the btn with animation
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
   window.scrollY > 500
     ? (topBtn.style.opacity = 1)
     : (topBtn.style.opacity = 0)
-}
+})
 
 // ---------------- NavBar active link --------------------------------------------------
-let activeNavLink = event => {
-  window.document
-    .querySelectorAll('header nav ul li a.active')
-    .forEach(item => item.classList.remove('active'))
+function activeNavLink(event) {
+  document.querySelectorAll('header nav ul li a.active').forEach(item => {
+    item.classList.remove('active')
+  })
   event.target.classList.add('active')
 }
 
-// ---------------- Smooth scroll to the elements --------------------------------------------
-const links = document.querySelectorAll('header nav ul a')
-
-for (const link of links) {
-  link.onclick = function clickHandler(e) {
-    e.preventDefault()
-    const href = this.getAttribute('href')
-    document.querySelector(href).scrollIntoView({ behavior: 'smooth' })
-  }
-}
-
-// ---------------- On scroll, Show/Hide the header -----------------------------------------
+// ---------------- hide navBar on scroll down, show on scroll up -----------------------------------------
 let navBar = document.querySelector('header')
 let prevScrollPos = window.pageYOffset
 window.addEventListener('scroll', () => {
@@ -43,33 +32,7 @@ window.addEventListener('scroll', () => {
   prevScrollPos = currentScrollPos
 })
 
-// window.addEventListener('scroll', () => {
-//   let navBar = document.querySelector('header')
-
-//   navBar.style.opacity == 0
-//     ? (navBar.style.opacity = 1)
-//     : (navBar.style.opacity = 0)
-// })
-
-// var timer = null
-// let navBar = document.querySelector('header')
-
-// window.addEventListener(
-//   'scroll',
-//   function () {
-//     if (timer !== null) {
-//       clearTimeout(timer)
-//     }
-//     timer = setTimeout(() => {
-//       navBar.style.opacity == 0
-//         ? (navBar.style.opacity = 1)
-//         : (navBar.style.opacity = 0)
-//     }, 150)
-//   },
-//   false
-// )
-
-// ---------------- Toggle Nav ---------------------------------------------------------
+// ---------------- Toggle NavBar ---------------------------------------------------------
 let toggleNav = document.querySelector('header .toggle-nav')
 let nav = document.querySelector('header nav')
 
@@ -78,3 +41,48 @@ toggleNav.onclick = () => {
     ? (nav.style.display = 'block')
     : (nav.style.display = 'none')
 }
+
+// ----------------  NavBar ---------------------------------------------------------
+let ul = document.querySelector('header nav ul')
+
+// Header
+let header = document.createElement('li')
+header.innerHTML = '<a class="active" href="#header">Header</a>'
+// Team
+let Team = document.createElement('li')
+Team.innerHTML = '<a href="#team">Team</a>'
+// Contact
+let contact = document.createElement('li')
+contact.innerHTML = '<a href="#contact">Contact</a>'
+// About
+let about = document.createElement('li')
+about.innerHTML = '<a href="#about">About</a>'
+// Footer
+let footer = document.createElement('li')
+footer.innerHTML = '<a href="#footer">Footer</a>'
+
+ul.append(header, Team, contact, about, footer)
+
+// ---------------- Smooth scroll to the section --------------------------------------------
+let links = document.querySelectorAll('header nav ul a')
+
+links.forEach(link => {
+  link.onclick = function clickHandler(e) {
+    e.preventDefault()
+    let href = this.getAttribute('href')
+    document.querySelector(href).scrollIntoView({ behavior: 'smooth' })
+  }
+})
+
+// ---------------- highlighting active section --------------------------------------------
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  
+  let index = sections.length;
+  
+  while(--index && window.scrollY + 850 < sections[index].offsetTop) {}
+  
+  links.forEach((link) => link.classList.remove('active'));
+  links[index].classList.add('active');
+});
