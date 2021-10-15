@@ -21,16 +21,16 @@ function activeNavLink(event) {
 }
 
 // ---------------- hide navBar on scroll down, show on scroll up -----------------------------------------
-let navBar = document.querySelector('header')
-let prevScrollPos = window.pageYOffset
-window.addEventListener('scroll', () => {
-  let currentScrollPos = window.pageYOffset
+// let navBar = document.querySelector('header')
+// let prevScrollPos = window.pageYOffset
+// window.addEventListener('scroll', () => {
+//   let currentScrollPos = window.pageYOffset
 
-  prevScrollPos > currentScrollPos
-    ? (navBar.style.top = '0')
-    : (navBar.style.top = '-500px')
-  prevScrollPos = currentScrollPos
-})
+//   prevScrollPos > currentScrollPos
+//     ? (navBar.style.top = '0')
+//     : (navBar.style.top = '-500px')
+//   prevScrollPos = currentScrollPos
+// })
 
 // ---------------- Toggle NavBar ---------------------------------------------------------
 let toggleNav = document.querySelector('header .toggle-nav')
