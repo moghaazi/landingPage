@@ -1,7 +1,7 @@
-<!-- Add banner here -->
-
 # Landing Page
+
 ### Simple Landing-page project for Udacity & FWD
+
 # Installation
 To use this project, first clone the repo on your device using the command below:
 
